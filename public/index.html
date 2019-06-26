@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>❤ Lily Sweety</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <link rel="stylesheet" href="stylesheets/all.css">
+
+</head>
+
+<body>
+<!-- Menu -->
+<nav class="navbar navbar-expand-md navbar-light pb-3 pt-4">
+ <div class="container">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/logo.svg" width="190px" alt=""></a>
+  <!-- 購物車 -->
+  <div class="dropdown d-flex order-md-1 ml-4">
+    <button class="btn btn-cart text-info" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      <i style="font-size: 1.5rem;" class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-danger">2</span>
+    </button>
+  
+    <div class="dropdown-menu dropdown-menu-right p-4" aria-labelledby="dropdownMenuButton">
+      <h6 class="text-info">已選商品</h6>
+      <table class="table table-cart mb-0">
+        <tbody>
+          <tr>
+            <td>
+              <a href="#removeModal" data-toggle="modal" data-title="馬卡龍蛋糕 1 份">
+                <i class="text-secondary far fa-trash-alt" aria-hidden="true"></i>
+              </a>
+            </td>
+            <td>馬卡龍蛋糕</td>
+            <td>1 份</td>
+            <td>$450</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#removeModal" data-toggle="modal" data-title="牛奶尬圈圈 1 份">
+                <i class="text-secondary far fa-trash-alt" aria-hidden="true"></i>
+              </a>
+            </td>
+            <td>牛奶尬圈圈</td>
+            <td>1 份</td>
+            <td>$450</td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="btn btn-info btn-block" href="carts.html">結帳去</a>
+    </div>
+  </div>
+  <!-- 購物車END -->
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto text-info">
+      <a class="nav-item nav-link text-info ml-4 active" href="index.html">首頁<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link text-infoLight ml-4" href="products.html">甜點</a>
+      <a class="nav-item nav-link text-infoLight ml-4" href="register.html">登入</a>
+    </div>
+  </div>
+ </div>
+</nav>
+<!-- Menu END -->
+
+
+<header class="container px-0 px-md-3 header">
+  <div class="bg-cover"
+    style="background-image: url(https://images.unsplash.com/photo-1547418113-4c227895e19f?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);height: 450px;">
+  </div>
+  <h1 class="text-hide">Lily Sweety</h1>
+  <div class="row no-gutters justify-content-center" style="margin-top: -90px">
+    <div class="col-md-10">
+      <div class="row no-gutters">
+        <a href="javascript:void(0)" class="col-4 p-5 rectangle-wrap active">
+          <span class="rectangle-text h4">本日精選</span>
+          <div class="position-cover rectangle-color zindex-1"></div>
+          <div class="rectangle-image bg-cover zindex-2"
+            style="background-image: url(https://images.unsplash.com/photo-1547418113-cadfe9f0b2ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80)">
+          </div>
+        </a>
+        <a href="javascript:void(0)" class="col-4 p-5 rectangle-wrap">
+          <span class="rectangle-text h4">人氣推薦</span>
+          <div class="position-cover rectangle-color zindex-1"></div>
+          <div class="rectangle-image bg-cover zindex-2"
+            style="background-image: url(https://images.unsplash.com/photo-1464347744102-11db6282f854?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=887&q=80)">
+          </div>
+        </a>
+        <a href="javascript:void(0)" class="col-4 p-5 rectangle-wrap">
+          <span class="rectangle-text h4">新品上市</span>
+          <div class="position-cover rectangle-color zindex-1"></div>
+          <div class="rectangle-image bg-cover zindex-2"
+            style="background-image: url(https://images.unsplash.com/photo-1542210435-59f90e156f10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=333&q=80)">
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="my-md-6">
+  <!-- 手機標題 -->
+  <div class="row justify-content-center no-gutters d-md-none">
+    <div class="col-6">
+      <img src="images/why1-sm.svg" class="my-5 img-fluid" alt="">
+    </div>
+  </div>
+  <!-- 電腦 -->
+  <div class="bg-lilysweety">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 extendY-25">
+          <div class="bg-cover h-100" style="background-image: url(https://images.unsplash.com/photo-1558896450-9a18ea141933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80)"></div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end" style="max-height: 380px;">
+          <div class="verticalFont py-5 text-info">
+            <p class="my-0">青山依舊在，幾度夕陽紅，昨夜雨疏風驟，濃睡不消殘酒，慣看秋月春風。</p>
+            <p class="my-0">一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。是非成敗轉頭空，滾滾長江東逝水。</p>
+          </div>
+          <div class="d-none d-md-block extendY-25">
+            <img src="images/why1-md.svg" width="88" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="my-md-6">
+  <!-- 手機標題 -->
+  <div class="row justify-content-center no-gutters d-md-none">
+    <div class="col-6">
+      <img src="images/why2-sm.svg" class="my-5 img-fluid" alt="">
+    </div>
+  </div>
+  <!-- 電腦 -->
+  <div class="bg-lilysweety">
+    <div class="container">
+      <div class="row flex-row-reverse">
+        <div class="col-md-6 extendY-25">
+          <div class="bg-cover h-100"
+            style="background-image: url(https://images.unsplash.com/photo-1501443762994-82bd5dace89a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)">
+          </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-start" style="max-height: 380px;">
+          <div class="verticalFont py-5 text-info">
+            <p class="my-0">青山依舊在，幾度夕陽紅，昨夜雨疏風驟，濃睡不消殘酒，慣看秋月春風。</p>
+            <p class="my-0">一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。是非成敗轉頭空，滾滾長江東逝水。</p>
+          </div>
+          <div class="d-none d-md-block extendY-25">
+            <img src="images/why2-md.svg" width="88" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="my-md-6 my-5 text-center">
+  <div class="d-none d-md-block"><img src="images/why3-md.svg" class="img-fluid" alt="" width="100px"></div>
+  <div class="d-md-none"><img src="images/why3-sm.svg" class="img-fluid" alt="" width="50%"></div>
+</section>
+
+<section class="my-5 container">
+  <div class="row">
+<!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-images bg-cover" style="background-image: url(https://images.unsplash.com/photo-1519340333755-56e9c1d04579?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)">
+          <div class="card-images-tag bg-info text-white px-2 py-3">本日精選</div>
+          <div class="card-images-icon text-info h4">
+            <label>
+              <input class="card-check" type="checkbox">
+              <i class="far fa-heart icon-uncheck"></i>
+              <i class="fas fa-heart icon-check"></i>
+            </label>
+          </div>
+        </div>
+        <div class="d-flex text-center text-info">
+          <div class="col card-lineR py-2">馬卡龍蛋糕</div>
+          <div class="col font-weight-bold py-2">NT$ 450</div>
+        </div>
+        <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+      </div>
+    </div>
+<!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-images bg-cover"
+          style="background-image: url(https://images.unsplash.com/photo-1490567674331-72de84794694?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80)">
+          <div class="card-images-tag bg-info text-white px-2 py-3">本日精選</div>
+          <div class="card-images-icon text-info h4">
+            <label>
+              <input class="card-check" type="checkbox">
+              <i class="far fa-heart icon-uncheck"></i>
+              <i class="fas fa-heart icon-check"></i>
+            </label>
+          </div>
+        </div>
+        <div class="d-flex text-center text-info">
+          <div class="col card-lineR py-2">牛奶尬圈圈</div>
+          <div class="col font-weight-bold py-2">NT$ 450</div>
+        </div>
+        <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+      </div>
+    </div>
+<!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-images bg-cover"
+          style="background-image: url(https://images.unsplash.com/photo-1516919549054-e08258825f80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
+          <div class="card-images-tag bg-info text-white px-2 py-3">本日精選</div>
+          <div class="card-images-icon text-info h4">
+            <label>
+              <input class="card-check" type="checkbox">
+              <i class="far fa-heart icon-uncheck"></i>
+              <i class="fas fa-heart icon-check"></i>
+            </label>
+          </div>
+        </div>
+        <div class="d-flex text-center text-info">
+          <div class="col card-lineR py-2">彩虹圈圈</div>
+          <div class="col font-weight-bold py-2">NT$ 450</div>
+        </div>
+        <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<a class="top" href="#">▲ 上</a>
+<section class="bg-info mt-5">
+  <div class="container">
+    <div class="row justify-content-center align-items-center py-4 h4 mb-0">
+      <div class="col-md-5 text-light"><img class="pr-2 py-1" src="images/logo-single.svg" alt=""> 訂閱你我的蜜蜜件</div>
+      <div class="col-md-5 text-info">
+        <div class="d-flex justify-content-between align-items-center bg-lilysweety">
+          <label class="pt-1 px-4" for="Email"><i class="fas fa-envelope"></i></label>
+          <input type="mail" id="Email" class="form-input w-100 border-0 bg-lilysweety">
+          <button class="btn btn-warning rounded-0 p-3 text-white"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="py-4 bg-lilysweety">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-5 d-flex flex-column justify-content-between">
+          <div>
+            <img src="images/logo.svg" height="27" alt="">
+          </div>
+          <ul class="list-unstyled mt-5 text-info">
+            <li>02-5200-1234</li>
+            <li><a class="text-info" href="mailto:sweetaste@email.com">lilysweety@email.com</a></li>
+            <li>104 台北市中山區中山北路一段1號</li>
+          </ul>
+        </div>
+        <div class="col-md-5 text-right d-none d-md-block">
+          <img src="images/slogan-md.svg" width="60" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-5 mt-2 h1 text-info">
+          <i class="fab fa-line"></i>
+          <i class="fab fa-facebook-square"></i>
+        </div>
+        <div class="col-md-5 text-md-right mt-2">
+          <span class="text-info">© 2019 LilySweety All Rights Reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!-- Footer END -->
+
+
+  <script src="javascripts/vendor.js"></script>
+  <script src="javascripts/script.js"></script>
+
+</body>
+
+</html>

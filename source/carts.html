@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>❤ Lily Sweety</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <link rel="stylesheet" href="stylesheets/all.css">
+
+</head>
+
+<body>
+<!-- Menu -->
+<nav class="navbar navbar-expand-md navbar-light pb-3 pt-4">
+ <div class="container">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/logo.svg" width="190px" alt=""></a>
+  <!-- 購物車 -->
+  <div class="dropdown d-flex order-md-1 ml-4">
+    <button class="btn btn-cart text-info" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      <i style="font-size: 1.5rem;" class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-danger">2</span>
+    </button>
+  
+    <div class="dropdown-menu dropdown-menu-right p-4" aria-labelledby="dropdownMenuButton">
+      <h6 class="text-info">已選商品</h6>
+      <table class="table table-cart mb-0">
+        <tbody>
+          <tr>
+            <td>
+              <a href="#removeModal" data-toggle="modal" data-title="馬卡龍蛋糕 1 份">
+                <i class="text-secondary far fa-trash-alt" aria-hidden="true"></i>
+              </a>
+            </td>
+            <td>馬卡龍蛋糕</td>
+            <td>1 份</td>
+            <td>$450</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#removeModal" data-toggle="modal" data-title="牛奶尬圈圈 1 份">
+                <i class="text-secondary far fa-trash-alt" aria-hidden="true"></i>
+              </a>
+            </td>
+            <td>牛奶尬圈圈</td>
+            <td>1 份</td>
+            <td>$450</td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="btn btn-info btn-block" href="carts.html">結帳去</a>
+    </div>
+  </div>
+  <!-- 購物車END -->
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto text-info">
+      <a class="nav-item nav-link text-info ml-4 active" href="index.html">首頁<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link text-infoLight ml-4" href="products.html">甜點</a>
+      <a class="nav-item nav-link text-infoLight ml-4" href="register.html">登入</a>
+    </div>
+  </div>
+ </div>
+</nav>
+<!-- Menu END -->
+
+
+<!-- 結帳頁 -->
+<section class="container mt-5">
+  <h1 class="text-center text-warning mb-4">/ 結帳 /</h1>
+  <div class="form-row">
+    <div class="col-12 col-sm">
+      <div class="alert alert-warning text-center" style="border-radius: 50px;" role="alert">1.輸入付款資料</div>
+    </div>
+    <div class="col-12 col-sm">
+      <div class="alert alert-secondary text-center" style="border-radius: 50px;" role="alert">2.完成</div>
+    </div>
+  </div>
+
+
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <!-- 折疊資訊 -->
+      <div id="accordionExample">
+        <div class="card">
+          <div class="card-header d-flex align-items-center" id="headingOne">
+            <h2 class="my-0">
+              <a class="btn btn-link text-info" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne">
+                顯示購物車細節
+              </a>
+            </h2>
+            <div class="h3 ml-auto my-0">$900</div>
+          </div>
+        </div>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="text-center" width="100"><a href="#removeModal" data-toggle="modal" data-title="簡單衣著 1 件"><i
+                      class="far fa-trash-alt text-secondary"></i></a></th>
+                <th>商品名稱</th>
+                <th width="100">數量</th>
+                <th width="80">小計</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="align-middle">
+                  <img
+                    src="https://images.unsplash.com/photo-1519340333755-56e9c1d04579?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                    class="w-100 border border-info p-1" alt="">
+                </td>
+                <td>馬卡龍蛋糕</td>
+                <td>1 份</td>
+                <td>$450</td>
+              </tr>
+              <tr>
+                <td class="align-middle">
+                  <img
+                    src="https://images.unsplash.com/photo-1490567674331-72de84794694?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80"
+                    class="w-100 border border-info p-1" alt="">
+                </td>
+                <td>牛奶尬圈圈</td>
+                <td>1 份</td>
+                <td>$450</td>
+              </tr>
+              <tr>
+                <td colspan="3" class="text-right">運費</td>
+                <td>
+                  <strong>$0</strong>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" class="text-right">合計</td>
+                <td>
+                  <strong>$900</strong>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- 折疊資訊END -->
+      <h5 class="bg-info text-white text-center p-3 mt-4">訂購人資訊</h5>
+      <form class="needs-validation" novalidate>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName">Name</label>
+            <input type="text" class="form-control" id="inputName" placeholder="請輸入姓名" required>
+            <div class="invalid-feedback">請輸入姓名</div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="請輸入信箱" required>
+            <div class="invalid-feedback">請輸入信箱</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="大安區忠孝東路一段1號" required>
+          <div class="invalid-feedback">請輸入地址</div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <select id="inputCity" class="form-control">
+              <option selected>Choose...</option>
+              <option>台北市</option>
+              <option>台中市</option>
+              <option>高雄市</option>
+            </select>
+          </div>
+          <div class="form-group col-md">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip" placeholder="郵遞區號">
+          </div>
+        </div>
+        <div class="form-group d-flex align-content-center">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+          <div class="ml-auto">
+            <button type="reset" class="btn btn-secondary">清除</button>
+            <button type="submit" class="btn btn-info">確認付款</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</section><!-- container -->
+
+
+<!-- Footer -->
+<a class="top" href="#">▲ 上</a>
+<section class="bg-info mt-5">
+  <div class="container">
+    <div class="row justify-content-center align-items-center py-4 h4 mb-0">
+      <div class="col-md-5 text-light"><img class="pr-2 py-1" src="images/logo-single.svg" alt=""> 訂閱你我的蜜蜜件</div>
+      <div class="col-md-5 text-info">
+        <div class="d-flex justify-content-between align-items-center bg-lilysweety">
+          <label class="pt-1 px-4" for="Email"><i class="fas fa-envelope"></i></label>
+          <input type="mail" id="Email" class="form-input w-100 border-0 bg-lilysweety">
+          <button class="btn btn-warning rounded-0 p-3 text-white"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="py-4 bg-lilysweety">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-5 d-flex flex-column justify-content-between">
+          <div>
+            <img src="images/logo.svg" height="27" alt="">
+          </div>
+          <ul class="list-unstyled mt-5 text-info">
+            <li>02-5200-1234</li>
+            <li><a class="text-info" href="mailto:sweetaste@email.com">lilysweety@email.com</a></li>
+            <li>104 台北市中山區中山北路一段1號</li>
+          </ul>
+        </div>
+        <div class="col-md-5 text-right d-none d-md-block">
+          <img src="images/slogan-md.svg" width="60" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-5 mt-2 h1 text-info">
+          <i class="fab fa-line"></i>
+          <i class="fab fa-facebook-square"></i>
+        </div>
+        <div class="col-md-5 text-md-right mt-2">
+          <span class="text-info">© 2019 LilySweety All Rights Reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!-- Footer END -->
+
+
+  <script src="javascripts/vendor.js"></script>
+  <script src="javascripts/script.js"></script>
+
+</body>
+
+</html>

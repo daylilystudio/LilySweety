@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>❤ Lily Sweety</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <link rel="stylesheet" href="stylesheets/all.css">
+
+</head>
+
+<body>
+<!-- Menu -->
+<nav class="navbar navbar-expand-md navbar-light pb-3 pt-4">
+ <div class="container">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/logo.svg" width="190px" alt=""></a>
+  <!-- 購物車 -->
+  <div class="dropdown d-flex order-md-1 ml-4">
+    <button class="btn btn-cart text-info" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      <i style="font-size: 1.5rem;" class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-danger">2</span>
+    </button>
+  
+    <div class="dropdown-menu dropdown-menu-right p-4" aria-labelledby="dropdownMenuButton">
+      <h6 class="text-info">已選商品</h6>
+      <table class="table table-cart mb-0">
+        <tbody>
+          <tr>
+            <td>
+              <a href="#removeModal" data-toggle="modal" data-title="馬卡龍蛋糕 1 份">
+                <i class="text-secondary far fa-trash-alt" aria-hidden="true"></i>
+              </a>
+            </td>
+            <td>馬卡龍蛋糕</td>
+            <td>1 份</td>
+            <td>$450</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#removeModal" data-toggle="modal" data-title="牛奶尬圈圈 1 份">
+                <i class="text-secondary far fa-trash-alt" aria-hidden="true"></i>
+              </a>
+            </td>
+            <td>牛奶尬圈圈</td>
+            <td>1 份</td>
+            <td>$450</td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="btn btn-info btn-block" href="carts.html">結帳去</a>
+    </div>
+  </div>
+  <!-- 購物車END -->
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto text-info">
+      <a class="nav-item nav-link text-info ml-4 active" href="index.html">首頁<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link text-infoLight ml-4" href="products.html">甜點</a>
+      <a class="nav-item nav-link text-infoLight ml-4" href="register.html">登入</a>
+    </div>
+  </div>
+ </div>
+</nav>
+<!-- Menu END -->
+
+
+<!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid bg-cover" style="background-image: url(https://images.unsplash.com/photo-1558535299-8e8f4fe18e00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);min-height:390px;">
+  <div class="container text-right">
+    <img src="http://localhost:3000/images/why3-md.svg" style="filter:drop-shadow(2px 2px 0px #fff);" width="88px" alt="">
+  </div>
+</div>
+
+<!-- Product -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div id="list-tab" class="list-group sticky-top mb-4">
+        <a href="#pane-1" class="list-group-item list-group-item-action list-group-item-light active" data-toggle="list">
+          <i class="fas fa-gift"></i> 給你甜甜</a>
+        <a href="#pane-2" class="list-group-item list-group-item-action list-group-item-light" data-toggle="list"><i
+            class="fas fa-star"></i> 本日精選</a>
+        <a href="#pane-3" class="list-group-item list-group-item-action list-group-item-light" data-toggle="list"><i class="fab fa-hotjar"></i> 人氣推薦</a>
+        <a href="#pane-4" class="list-group-item list-group-item-action list-group-item-light" data-toggle="list"><i class="fas fa-cocktail"></i> 飲料好喝</a>
+        <a class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true"><i class="fas fa-comment-slash"></i> 絕版品</a>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane active" id="pane-1">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1558896450-e39d25330f72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">粉紅點點</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1560100261-226dff8daa82?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">一杯咖啡</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1559574721-59b20576d6ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=679&q=80)">
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">軟軟夾心</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1519340333755-56e9c1d04579?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)">
+                  <div class="card-images-tag bg-info text-white px-2 py-3">本日精選</div>
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">馬卡龍蛋糕</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1490567674331-72de84794694?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80)">
+                  <div class="card-images-tag bg-info text-white px-2 py-3">本日精選</div>
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">牛奶尬圈圈</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1516919549054-e08258825f80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
+                  <div class="card-images-tag bg-info text-white px-2 py-3">本日精選</div>
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">彩虹圈圈</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="pane-2">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1519340333755-56e9c1d04579?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)">
+                  <div class="card-images-tag bg-info text-white px-2 py-3">本日精選</div>
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">馬卡龍蛋糕</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1490567674331-72de84794694?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80)">
+                  <div class="card-images-tag bg-info text-white px-2 py-3">本日精選</div>
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">牛奶尬圈圈</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1516919549054-e08258825f80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
+                  <div class="card-images-tag bg-info text-white px-2 py-3">本日精選</div>
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">彩虹圈圈</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="pane-3">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1552552492-9c335658343d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">漢堡甜甜</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1548365328-8c6db3220e4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">好多餅乾</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1560106952-abd9130296c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1275&q=80)">
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">甜甜圈圈</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="pane-4">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1414450397866-85f90db48714?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">柳橙罐罐</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/photo-1553177595-4de2bb0842b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=332&q=80)">
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">草莓奶昔</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-images bg-cover"
+                  style="background-image: url(https://images.unsplash.com/reserve/F8x8NPwTQEmVdXOHjO8o_Espresso.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80)">
+                  <div class="card-images-icon text-info h4">
+                    <label>
+                      <input class="card-check" type="checkbox">
+                      <i class="far fa-heart icon-uncheck"></i>
+                      <i class="fas fa-heart icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex text-center text-info">
+                  <div class="col card-lineR py-2">無敵雪泡</div>
+                  <div class="col font-weight-bold py-2">NT$ 450</div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-outline-secondary btn-block rounded-0">加入購物車</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</div>
+
+
+<!-- Footer -->
+<a class="top" href="#">▲ 上</a>
+<section class="bg-info mt-5">
+  <div class="container">
+    <div class="row justify-content-center align-items-center py-4 h4 mb-0">
+      <div class="col-md-5 text-light"><img class="pr-2 py-1" src="images/logo-single.svg" alt=""> 訂閱你我的蜜蜜件</div>
+      <div class="col-md-5 text-info">
+        <div class="d-flex justify-content-between align-items-center bg-lilysweety">
+          <label class="pt-1 px-4" for="Email"><i class="fas fa-envelope"></i></label>
+          <input type="mail" id="Email" class="form-input w-100 border-0 bg-lilysweety">
+          <button class="btn btn-warning rounded-0 p-3 text-white"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="py-4 bg-lilysweety">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-5 d-flex flex-column justify-content-between">
+          <div>
+            <img src="images/logo.svg" height="27" alt="">
+          </div>
+          <ul class="list-unstyled mt-5 text-info">
+            <li>02-5200-1234</li>
+            <li><a class="text-info" href="mailto:sweetaste@email.com">lilysweety@email.com</a></li>
+            <li>104 台北市中山區中山北路一段1號</li>
+          </ul>
+        </div>
+        <div class="col-md-5 text-right d-none d-md-block">
+          <img src="images/slogan-md.svg" width="60" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-5 mt-2 h1 text-info">
+          <i class="fab fa-line"></i>
+          <i class="fab fa-facebook-square"></i>
+        </div>
+        <div class="col-md-5 text-md-right mt-2">
+          <span class="text-info">© 2019 LilySweety All Rights Reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!-- Footer END -->
+
+
+  <script src="javascripts/vendor.js"></script>
+  <script src="javascripts/script.js"></script>
+
+</body>
+
+</html>
