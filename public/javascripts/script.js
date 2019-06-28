@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+    //回頂端
     $('.top').hide();
     $(document).scroll(function () {
         if ($(document).scrollTop() > 500) {
@@ -11,6 +13,7 @@ $(document).ready(function() {
     $('.top').click(function () {
         $('html,body').animate({ 'scrollTop': '0px' }, 1000);
     });
+
     //捲軸往下時 選單固定在上
     $(document).scroll(function () {
         if ($(document).scrollTop() > 20) {
@@ -19,6 +22,15 @@ $(document).ready(function() {
             $('nav').removeClass('navfix');
         }
     });
+
+    //Madal標題資訊
+    $('#removeModal').on('show.bs.modal', function (event) {
+        var btn = $(event.relatedTarget);
+        var title = btn.data('title');
+        var modal = $(this);
+        modal.find('.modal-title').text('刪除 ' + title);
+    });
+    
 });
 
 // 表單驗證
@@ -39,11 +51,3 @@ $(document).ready(function() {
         });
     }, false);
 })();
-
-//Madal標題資訊
-$('#removeModal').on('show.bs.modal', function (event) {
-    var btn = $(event.relatedTarget);
-    var title = btn.data('title');
-    var modal = $(this);
-    modal.find('.modal-title').text('刪除 ' + title);
-});

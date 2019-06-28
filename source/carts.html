@@ -20,7 +20,8 @@
     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="index.html"><img src="images/logo.svg" width="190px" alt=""></a>
+  <a class="navbar-brand d-none d-sm-block" href="index.html"><img src="images/logo.svg" width="190px" alt=""></a>
+  <a class="navbar-brand d-sm-none" href="index.html"><img src="images/logo-font.svg" width="135px" alt=""></a>
   <!-- 購物車 -->
   <div class="dropdown d-flex order-md-1 ml-4">
     <button class="btn btn-cart text-info" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -71,133 +72,105 @@
 
 
 <!-- 結帳頁 -->
-<section class="container mt-5">
-  <h1 class="text-center text-warning mb-4">/ 結帳 /</h1>
-  <div class="form-row">
-    <div class="col-12 col-sm">
-      <div class="alert alert-warning text-center" style="border-radius: 50px;" role="alert">1.輸入付款資料</div>
-    </div>
-    <div class="col-12 col-sm">
-      <div class="alert alert-secondary text-center" style="border-radius: 50px;" role="alert">2.完成</div>
-    </div>
-  </div>
-
-
-  <div class="row justify-content-center">
+<section class="container my-4">
+  <div class="row">
     <div class="col-md-8">
-      <!-- 折疊資訊 -->
-      <div id="accordionExample">
-        <div class="card">
-          <div class="card-header d-flex align-items-center" id="headingOne">
-            <h2 class="my-0">
-              <a class="btn btn-link text-info" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                aria-controls="collapseOne">
-                顯示購物車細節
-              </a>
-            </h2>
-            <div class="h3 ml-auto my-0">$900</div>
+      <h4 class="bg-lilysweety text-info text-center p-3 mb-0">您的購物車</h4>
+      <div class="cart-row d-flex flex-column flex-md-row py-3">
+        <!-- 商品 -->
+        <div class="d-flex align-items-center flex-grow-1 mr-md-3">
+          <div class="my-4 mr-4 flex-grow-1 flex-md-grow-0">
+            <div class="cart-image"
+              style="background-image: url(https://images.unsplash.com/photo-1519340333755-56e9c1d04579?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)">
+            </div>
+          </div>
+          <div class="d-flex align-items-md-center flex-column flex-md-row flex-md-grow-1">
+            <div class="flex-fill mr-md-4 text-secondary">
+              <span class="h5">馬卡龍蛋糕</span><br>
+              <span>NT$ 450</span>
+            </div>
+            <div class="ml-md-auto mt-3 mt-md-0" style="width: 130px;">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button type="button"
+                    class="btn btn-outline-secondary text-base-size">-</button>
+                </div>
+                <input type="text" class="form-control text-center" value="1">
+                <div class="input-group-append">
+                  <button type="button"
+                    class="btn btn-outline-secondary text-base-size">+</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-          <table class="table">
-            <thead>
-              <tr>
-                <th class="text-center" width="100"><a href="#removeModal" data-toggle="modal" data-title="簡單衣著 1 件"><i
-                      class="far fa-trash-alt text-secondary"></i></a></th>
-                <th>商品名稱</th>
-                <th width="100">數量</th>
-                <th width="80">小計</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="align-middle">
-                  <img
-                    src="https://images.unsplash.com/photo-1519340333755-56e9c1d04579?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-                    class="w-100 border border-info p-1" alt="">
-                </td>
-                <td>馬卡龍蛋糕</td>
-                <td>1 份</td>
-                <td>$450</td>
-              </tr>
-              <tr>
-                <td class="align-middle">
-                  <img
-                    src="https://images.unsplash.com/photo-1490567674331-72de84794694?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80"
-                    class="w-100 border border-info p-1" alt="">
-                </td>
-                <td>牛奶尬圈圈</td>
-                <td>1 份</td>
-                <td>$450</td>
-              </tr>
-              <tr>
-                <td colspan="3" class="text-right">運費</td>
-                <td>
-                  <strong>$0</strong>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="3" class="text-right">合計</td>
-                <td>
-                  <strong>$900</strong>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- 價錢 -->
+        <div class="ml-md-auto align-items-center py-3 justify-content-end d-flex">
+          <span class="h5 mb-0 mr-4 mr-md-2 text-info">NT$ 450</span>
+          <a href="#removeModal" data-toggle="modal" data-title="馬卡龍蛋糕 1 份">
+            <i class="text-info far fa-trash-alt" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
-      <!-- 折疊資訊END -->
-      <h5 class="bg-info text-white text-center p-3 mt-4">訂購人資訊</h5>
-      <form class="needs-validation" novalidate>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputName">Name</label>
-            <input type="text" class="form-control" id="inputName" placeholder="請輸入姓名" required>
-            <div class="invalid-feedback">請輸入姓名</div>
+      <hr class="m-0" style="border-color:#ccc;">
+      <div class="cart-row d-flex flex-column flex-md-row py-3">
+        <!-- 商品 -->
+        <div class="d-flex align-items-center flex-grow-1 mr-md-3">
+          <div class="my-4 mr-4 flex-grow-1 flex-md-grow-0">
+            <div class="cart-image"
+              style="background-image: url(https://images.unsplash.com/photo-1490567674331-72de84794694?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80)">
+            </div>
           </div>
-          <div class="form-group col-md-6">
-            <label for="inputEmail">Email</label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="請輸入信箱" required>
-            <div class="invalid-feedback">請輸入信箱</div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="大安區忠孝東路一段1號" required>
-          <div class="invalid-feedback">請輸入地址</div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <select id="inputCity" class="form-control">
-              <option selected>Choose...</option>
-              <option>台北市</option>
-              <option>台中市</option>
-              <option>高雄市</option>
-            </select>
-          </div>
-          <div class="form-group col-md">
-            <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip" placeholder="郵遞區號">
+          <div class="d-flex align-items-md-center flex-column flex-md-row flex-md-grow-1">
+            <div class="flex-fill mr-md-4 text-secondary">
+              <span class="h5">牛奶尬圈圈</span><br>
+              <span>NT$ 450</span>
+            </div>
+            <div class="ml-md-auto mt-3 mt-md-0" style="width: 130px;">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button type="button" class="btn btn-outline-secondary text-base-size">-</button>
+                </div>
+                <input type="text" class="form-control text-center" value="1">
+                <div class="input-group-append">
+                  <button type="button" class="btn btn-outline-secondary text-base-size">+</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="form-group d-flex align-content-center">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
-          </div>
-          <div class="ml-auto">
-            <button type="reset" class="btn btn-secondary">清除</button>
-            <button type="submit" class="btn btn-info">確認付款</button>
-          </div>
+        <!-- 價錢 -->
+        <div class="ml-md-auto align-items-center py-3 justify-content-end d-flex">
+          <span class="h5 mb-0 mr-4 mr-md-2 text-info">NT$ 450</span>
+          <a href="#removeModal" data-toggle="modal" data-title="牛奶尬圈圈 1 份">
+            <i class="text-info far fa-trash-alt" aria-hidden="true"></i>
+          </a>
         </div>
+      </div>
 
-      </form>
+    </div>
+
+    <div class="col-md-4">
+      <h4 class="d-md-none bg-lilysweety text-info text-center p-3 mb-0">訂單摘要</h4>
+      <div class="bg-md-info text-center p-3">
+        <h4 class="d-none d-md-block py-2">訂單摘要</h4>
+        <hr class="d-none d-md-block border-white">
+        <div class="d-flex justify-content-between mb-2">
+          <span>小計</span>
+          <span>NT$ 900</span>
+        </div>
+        <div class="d-flex justify-content-between mb-3">
+          <span>運費</span>
+          <span>NT$ 200</span>
+        </div>
+        <div class="d-flex justify-content-between">
+          <span class="h5">總計</span>
+          <span class="h5">NT$ 1,100</span>
+        </div>
+      </div>
+      <a href="checkout1.html" class="btn btn-warning btn-block btn-lg rounded-0 py-2 text-white">結帳</a>
     </div>
   </div>
-
 </section><!-- container -->
 
 
@@ -247,6 +220,29 @@
     </div>
   </footer>
 <!-- Footer END -->
+
+<!-- 刪除區塊 Modal -->
+<div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-warning">
+        <h5 class="modal-title text-white m-0" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        確定刪除商品嗎？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ｘ</button>
+        <button type="button" class="btn btn-warning">是</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 刪除區塊 Modal -->
 
 
   <script src="javascripts/vendor.js"></script>

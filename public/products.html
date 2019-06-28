@@ -20,7 +20,8 @@
     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="index.html"><img src="images/logo.svg" width="190px" alt=""></a>
+  <a class="navbar-brand d-none d-sm-block" href="index.html"><img src="images/logo.svg" width="190px" alt=""></a>
+  <a class="navbar-brand d-sm-none" href="index.html"><img src="images/logo-font.svg" width="135px" alt=""></a>
   <!-- 購物車 -->
   <div class="dropdown d-flex order-md-1 ml-4">
     <button class="btn btn-cart text-info" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -73,7 +74,7 @@
 <!-- Jumbotron -->
 <div class="jumbotron jumbotron-fluid bg-cover" style="background-image: url(https://images.unsplash.com/photo-1558535299-8e8f4fe18e00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);min-height:390px;">
   <div class="container text-right">
-    <img src="http://localhost:3000/images/why3-md.svg" style="filter:drop-shadow(2px 2px 0px #fff);" width="88px" alt="">
+    <img src="http://localhost:3000/images/why3-md.svg" style="filter:drop-shadow(2px 2px 0px #fff)" width="88px" alt="">
   </div>
 </div>
 
@@ -455,6 +456,29 @@
     </div>
   </footer>
 <!-- Footer END -->
+
+<!-- 刪除區塊 Modal -->
+<div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-warning">
+        <h5 class="modal-title text-white m-0" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        確定刪除商品嗎？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ｘ</button>
+        <button type="button" class="btn btn-warning">是</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 刪除區塊 Modal -->
 
 
   <script src="javascripts/vendor.js"></script>

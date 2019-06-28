@@ -1,6 +1,6 @@
 //通用樣式
 .bg-lilysweety{
-  background-color: lighten($info,54%);
+  background-color: lighten($info,45%);
 }
 .box-shadow{
   box-shadow: 0px 5px 6px rgba(0, 0, 0, .10)
@@ -45,6 +45,16 @@
     margin-top: $spacer * 6;
     margin-bottom: $spacer * 6;
   }
+}
+.bg-md-info{
+    color: $info;
+  @media (min-width:768px) {
+    background-color: $info;
+    color: #fff;
+  }
+}
+.border-white{
+  border-color: #fff;
 }
 //商品卡
 .card-images{
@@ -92,6 +102,12 @@
 .table-cart{
   min-width:300px;
 }
+.cart-image {
+  height: 110px;
+  min-width: 110px;
+  background-position: center center;
+  background-size: cover; 
+}
 
 
 //頁面
@@ -112,14 +128,14 @@
       border-left: 1px solid white;
     }
     .rectangle-color {
-      background-color: rgba(23, 162, 184, 0.8);
+      background-color: rgba($info,.8);
       transition: background-color .5s;
     }
     &.active, &:hover{
       color: darken($info,10%);
       font-weight: bolder;
       .rectangle-color{
-        background-color: rgba(255, 225, 128, 0.8);
+        background-color: rgba($warning,.9);
       }
       .rectangle-image{
         filter: blur(0);
@@ -135,6 +151,35 @@
     filter: blur(4px);
     transition: filter .5s;
   }
+}
+
+//結帳頁
+.step-circle1, .step-circle2, .step-circle3{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid $warning;
+  background-color: $info;
+  z-index: 1;
+  position: relative;
+}
+.step-circle1:nth-of-type(1)::before, .step-circle2:nth-of-type(2)::before, .step-circle3:nth-of-type(3)::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $warning;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.step-line{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: $warning;
 }
 
 //footer
@@ -167,4 +212,6 @@
   position: fixed;
   top: 0;
   z-index: 10;
+  background-color: rgba(255, 255, 255, .9);
+  width: 100%;
 }
