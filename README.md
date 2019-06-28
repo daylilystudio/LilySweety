@@ -1,4 +1,4 @@
-# Lily Sweety
+## Lily Sweety
 
 
 ```
@@ -6,4 +6,4 @@ Bootstrap Homework
 ```
 
 
-[網站](https://daylilystudio.github.io/LilySweety/)。
+[網站](https://daylilystudio.github.io/LilySweety/public/)。
